@@ -9,6 +9,7 @@ import {
 } from "@material-ui/core";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
+import women from './images/favpng_businessperson-recruitment-sales-investor.png';
 
 import PasswordInput from "../lib/PasswordInput";
 import EmailInput from "../lib/EmailInput";
@@ -27,6 +28,13 @@ const useStyles = makeStyles((theme) => ({
   submitButton: {
     width: "300px",
   },
+  image: {
+    height: "500px"
+  },
+  nature: {
+    background: 'linear-gradient(to bottom,#FFEEE5, white)',
+    borderRadius: "5% 5% 5% 5%"
+  }
 }));
 
 const Login = (props) => {
@@ -106,45 +114,63 @@ const Login = (props) => {
   return loggedin ? (
     <Redirect to="/" />
   ) : (
-    <div>
-      <Paper elevation={3} className={classes.body}>
-        <Grid container direction="column" spacing={4} alignItems="center">
-          <Grid item>
-            <Typography variant="h3" component="h2">
-              Login
-            </Typography>
-          </Grid>
-          <Grid item>
-            <EmailInput
-              label="Email"
-              value={loginDetails.email}
-              onChange={(event) => handleInput("email", event.target.value)}
-              inputErrorHandler={inputErrorHandler}
-              handleInputError={handleInputError}
-              className={classes.inputBox}
-            />
-          </Grid>
-          <Grid item>
-            <PasswordInput
-              label="Password"
-              value={loginDetails.password}
-              onChange={(event) => handleInput("password", event.target.value)}
-              className={classes.inputBox}
-            />
-          </Grid>
-          <Grid item>
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={() => handleLogin()}
-              className={classes.submitButton}
-            >
-              Login
-            </Button>
-          </Grid>
+    <div className={classes.nature}>
+      <Grid
+        container
+        item
+        // direction="column"
+        alignItems="center"
+
+        justify="center"
+        style={{ padding: "30px", paddingTop: "10px", width: "1000px" }}
+
+      >
+        <Grid item md={6} xs={12}>
+          <img src={women} className={classes.image} alt="Logo" />
         </Grid>
-      </Paper>
-    </div >
+        <Grid item md={6} xs={12}>
+          <Paper elevation={3} className={classes.body}>
+            <Grid container direction="column" spacing={4} alignItems="center">
+              <Grid item>
+                <Typography variant="h3" component="h2">
+                  Login
+                </Typography>
+              </Grid>
+              <Grid item>
+                <EmailInput
+                  label="Email"
+                  value={loginDetails.email}
+                  onChange={(event) => handleInput("email", event.target.value)}
+                  inputErrorHandler={inputErrorHandler}
+                  handleInputError={handleInputError}
+                  className={classes.inputBox}
+                />
+              </Grid>
+              <Grid item>
+                <PasswordInput
+                  label="Password"
+                  value={loginDetails.password}
+                  onChange={(event) => handleInput("password", event.target.value)}
+                  className={classes.inputBox}
+                />
+              </Grid>
+              <Grid item>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onClick={() => handleLogin()}
+                  className={classes.submitButton}
+                >
+                  Login
+                </Button>
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+      </Grid>
+
+
+    </div>
   );
 };
 
