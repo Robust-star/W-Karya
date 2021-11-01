@@ -7,6 +7,9 @@ import { useHistory } from "react-router-dom";
 import women from './images/girl.png';
 import vector from './images/Vector.png'
 const useStyles = makeStyles((theme) => ({
+  Outer: {
+    width: '100%',
+  },
   Gb: {
     background: '#FFEEE5',
     height: "657px",
@@ -87,7 +90,7 @@ const Welcome = (props) => {
     history.push(location);
   };
   return (
-    <div>
+    <div className={classes.Outer}>
       <div className={classes.Gb}>
         <Grid
           container
