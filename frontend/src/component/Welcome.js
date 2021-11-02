@@ -2,10 +2,11 @@ import { Grid, Typography, Button } from "@material-ui/core";
 import {
   makeStyles
 } from "@material-ui/core";
-import { Height } from "@material-ui/icons";
+
 import { useHistory } from "react-router-dom";
 import women from './images/girl.png';
 import vector from './images/Vector.png'
+import Footer from "./Footer";
 const useStyles = makeStyles((theme) => ({
   Outer: {
     width: '100%',
@@ -17,12 +18,12 @@ const useStyles = makeStyles((theme) => ({
   },
   Gb2: {
     background: '#FFEEE5',
-    height: "657px",
+    height: "450px",
     borderRadius: "60% 60% 0 0"
   },
   Gb3: {
     background: '#FFEEE5',
-    background: 'linear-gradient(to top,#FFEEE5, white)',
+    background: 'linear-gradient(to top,white,#FFEEE5, white)',
     height: "657px",
     // borderRadius: "60% 60% 60% 60%"
   },
@@ -158,6 +159,7 @@ const Welcome = (props) => {
 
         </Grid>
       </div>
+      <Footer></Footer>
     </div>
 
   );
