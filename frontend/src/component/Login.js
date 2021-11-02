@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     height: "500px"
   },
   nature: {
-    background: 'linear-gradient(to bottom,#FFEEE5, white)',
+    background: 'linear-gradient(to bottom,white, #FFEEE5,white)',
     borderRadius: "5% 5% 5% 5%"
   }
 }));

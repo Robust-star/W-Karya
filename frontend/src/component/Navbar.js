@@ -96,6 +96,12 @@ const Navbar = (props) => {
           )
         ) : (
           <>
+            <Button color="inherit" className={classes.button} onClick={() => handleClick("/about")}>
+              About us
+            </Button>
+            <Button color="inherit" className={classes.button} onClick={() => handleClick("/contact")}>
+              Contact us
+            </Button>
             <Button color="inherit" className={classes.button} onClick={() => handleClick("/login")}>
               Login
             </Button>

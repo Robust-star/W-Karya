@@ -16,6 +16,8 @@ import JobApplications from "./component/recruiter/JobApplications";
 import AcceptedApplicants from "./component/recruiter/AcceptedApplicants";
 import RecruiterProfile from "./component/recruiter/Profile";
 import MessagePopup from "./lib/MessagePopup";
+import Contact from "./component/Contact";
+import Aboutus from "./component/Aboutus";
 import isAuth, { userType } from "./lib/isAuth";
 
 const useStyles = makeStyles((theme) => ({
@@ -51,6 +53,12 @@ function App() {
             <Switch>
               <Route exact path="/">
                 <Welcome />
+              </Route>
+              <Route exact path="/about">
+                <Aboutus />
+              </Route>
+              <Route exact path="/contact">
+                <Contact />
               </Route>
               <Route exact path="/login">
                 <Login />
