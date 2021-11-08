@@ -2,7 +2,7 @@ import { Grid, Typography, Button } from "@material-ui/core";
 import {
   makeStyles
 } from "@material-ui/core";
-
+import wimage from "./images/imagewe.png"
 import { useHistory } from "react-router-dom";
 import women from './images/girl.png';
 import vector from './images/Vector.png'
@@ -81,6 +81,19 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "50px",
     fontWeight: "500",
 
+  },
+  wi: {
+    height: "500px",
+    // left: "0px"
+    paddingLeft: "150px"
+  },
+  new: {
+    fontFamily: "Source Sans Pro",
+    fontWeight: "500",
+    paddingLeft: "120px",
+    paddingTop: "100px"
+    // fontSize: "16px",
+
   }
 }));
 const Welcome = (props) => {
@@ -127,17 +140,17 @@ const Welcome = (props) => {
           container
           item
           // direction="column"
-          alignItems="center"
+          // alignItems="center"
 
           // justify="center"
           style={{ padding: "30px", paddingTop: "10px" }}
 
         >
           <Grid item md={5} xs={12}>
-
+            <Typography variant="h5" className={classes.new}>We aim to change the face of leadership through its employment programs aimed at women.The application is creating equal and safe opportunities for women of unprivileged section. Focusing on value-based leadership and promote confidence to help them earn their livings. We aim to provide an application and website specific to women carving out a safer engagement portal.</Typography>
           </Grid>
           <Grid item md={7} xs={12}>
-
+            <img src={wimage} className={classes.wi}></img>;
           </Grid>
 
 

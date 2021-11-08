@@ -3,10 +3,10 @@ import {
   Toolbar,
   Typography,
   Button,
-  makeStyles,
+  makeStyles, Link
 } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
-
+import wkarya from "./images/Rectangle 129 (1).png";
 import isAuth, { userType } from "../lib/isAuth";
 
 const useStyles = makeStyles((theme) => ({
@@ -35,6 +35,10 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Source Sans Pro",
     fontStyle: "normal",
 
+  },
+  wk: {
+    height: "40px",
+    paddingTop: "13px"
   }
 }));
 
@@ -51,7 +55,7 @@ const Navbar = (props) => {
     <AppBar position="fixed" className={classes.Toolbar}>
       <Toolbar>
         <Typography variant="h6" className={classes.title}>
-          W-Karya
+          <Link href="/"><img src={wkarya} className={classes.wk}></img></Link>
         </Typography>
         {isAuth() ? (
           userType() === "recruiter" ? (
