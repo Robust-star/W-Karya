@@ -20,6 +20,7 @@ let schema = new mongoose.Schema(
       required: true,
     },
   },
+  //to be  ....
   { collation: { locale: "en" } }
 );
 

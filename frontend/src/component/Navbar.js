@@ -82,7 +82,7 @@ const Navbar = (props) => {
           ) : (
             <>
               <Button color="inherit" className={classes.button} onClick={() => handleClick("/home")}>
-                Home
+                Jobs
               </Button>
               <Button
                 color="inherit" className={classes.button}

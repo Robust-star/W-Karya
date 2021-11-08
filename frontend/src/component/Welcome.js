@@ -127,7 +127,7 @@ const Welcome = (props) => {
         >
           <Grid item md={5} xs={12}>
             <Typography variant="h2" className={classes.welcomeTag}>Find your job & <br />make sure goal</Typography>
-            <Typography variant="h5" className={classes.content}>Lorem ipsum asdaa erwt asde<br />looking forward to excel ahead.</Typography>
+            <Typography variant="h5" className={classes.content}>We aim to change the face of leadership through<br />its employment programs aimed at women.</Typography>
             <div className={classes.center}>
               <Button className={classes.config} onClick={() => handleClick("/signup")}>Join us</Button>
             </div>

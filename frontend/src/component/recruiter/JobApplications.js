@@ -588,6 +588,9 @@ const ApplicationTile = (props) => {
             Adhar: {application.jobApplicant.adhar !== null ? application.jobApplicant.adhar : "Not Submitted"}
           </Grid>
           <Grid item>
+            Summary: {application.sop !== "" ? application.sop : "Not Submitted"}
+          </Grid>
+          <Grid item>
             {application.jobApplicant.skills.map((skill) => (
               <Chip label={skill} style={{ marginRight: "2px" }} />
             ))}

@@ -205,7 +205,7 @@ function Aboutus() {
                             <br />
                             <h1 className={classes.cardhead}>Culture</h1>
                             <p className={classes.cardpara}>
-                                The NGOs and companies enrolled with us provide a friendly and thriving work culture. The employees are provided flexible time. All the women from different backgrounds are welcomed and nurtured....
+                                The NGOs and companies enrolled with us provide a friendly and thriving work culture. The employees are provided flexible time. All the women are welcomed and nurtured.
                             </p>
                             <p className={classes.cardpara1}>
                                 May 20th 2021
@@ -221,7 +221,7 @@ function Aboutus() {
                             <br />
                             <h1 className={classes.cardhead}>Opportunities</h1>
                             <p className={classes.cardpara}>
-                                W-Karya provides numerous opportunities to women who want to create a simple yet best life for themselves. We think about the future of women and generates potential scope....
+                                W-Karya provides numerous opportunities to women who want to create a simple yet best life for themselves. We think about the future of women and generates potential scope.
                             </p>
                             <p className={classes.cardpara1}>
                                 May 20th 2021
@@ -237,7 +237,7 @@ function Aboutus() {
                             <br />
                             <h1 className={classes.cardhead}>Safety</h1>
                             <p className={classes.cardpara}>
-                                W-Karya understands the importance of safety for women. We have strict policy against security and welfare for our users. We ensure refuge for the well-being of the women...
+                                W-Karya understands the importance of safety for women. We have strict policy against security and welfare for our users. We ensure refuge for the well-being of the women.
                             </p>
                             <p className={classes.cardpara1}>
                                 May 20th 2021

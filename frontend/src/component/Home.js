@@ -152,7 +152,7 @@ const JobTile = (props) => {
           }}
         >
           <TextField
-            label="Write SOP (upto 250 words)"
+            label="Tell us something about yourself (upto 250 words)"
             multiline
             rows={8}
             style={{ width: "100%", marginBottom: "30px" }}
@@ -204,7 +204,7 @@ const FilterPopup = (props) => {
               item
               xs={9}
               justify="space-around"
-              // alignItems="center"
+            // alignItems="center"
             >
               <Grid item>
                 <FormControlLabel
