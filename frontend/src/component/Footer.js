@@ -133,26 +133,26 @@ const Footer = (props) => {
                         </li>
                         <li><Link className={classes.link} href="#">Where we are?</Link>
                         </li>
-                        <li><Link className={classes.link} href="#">Fees</Link>
+                        <li><Link className={classes.link} href="#">Charges</Link>
                         </li>
-                        <li><Link className={classes.link} href="#">Guarantee</Link>
+                        <li><Link className={classes.link} href="#">Compensation</Link>
                         </li>
-                        <li><Link className={classes.link} href="#">Discount</Link>
+                        <li><Link className={classes.link} href="#">Job Security</Link>
                         </li>
                     </ul>
                 </Grid>
                 <Grid item md={3} xs={12}>
-                    <h3 className={classes.footerh3}>FAQs</h3>
+                    <h3 className={classes.footerh3}>Resources</h3>
                     <ul className={classes.list}>
-                        <li><Link className={classes.link} href="#">Why choose us?</Link>
+                        <li><Link className={classes.link} href="#">All jobs</Link>
                         </li>
-                        <li><Link className={classes.link} href="#">Where we are?</Link>
+                        <li><Link className={classes.link} href="#">Association</Link>
                         </li>
-                        <li><Link className={classes.link} href="#">Fees</Link>
+                        <li><Link className={classes.link} href="#">Contact</Link>
                         </li>
-                        <li><Link className={classes.link} href="#">Guarantee</Link>
+                        <li><Link className={classes.link} href="#">Aboutus</Link>
                         </li>
-                        <li><Link className={classes.link} href="#">Discount</Link>
+                        <li><Link className={classes.link} href="#">Policy</Link>
                         </li>
                     </ul>
                 </Grid>

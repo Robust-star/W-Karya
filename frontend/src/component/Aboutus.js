@@ -11,6 +11,7 @@ import {
     Paper,
     Typography,
 } from "@material-ui/core";
+import { useHistory } from "react-router-dom";
 import React from "react";
 import Footer from "./Footer";
 import About1 from "./images/Abt.png"
@@ -119,6 +120,11 @@ const useStyles = makeStyles((theme) => ({
 
 function Aboutus() {
     const classes = useStyles();
+    let history = useHistory();
+    const handleClick = (location) => {
+        console.log(location);
+        history.push(location);
+    };
     return (
         <div className={classes.Outer}>
             <Grid container>
@@ -137,7 +143,7 @@ function Aboutus() {
                     <Button
                         variant="contained"
                         color="primary"
-                        className={classes.submitButton}
+                        className={classes.submitButton} onClick={() => handleClick("/signup")}
                     >
                         Join Us
                     </Button>
