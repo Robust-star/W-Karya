@@ -14,7 +14,7 @@ import {
 import { useHistory } from "react-router-dom";
 import React from "react";
 import Footer from "./Footer";
-import About1 from "./images/Abt.png"
+import About1 from "./images/aboutCollage.png"
 import About2 from "./images/abt2.jpeg";
 import Card1 from "./images/img1.jpeg";
 import Card2 from "./images/img2.jpeg";
@@ -203,11 +203,9 @@ function Aboutus() {
                         <Paper elevation={4} className={classes.cardpaper}>
                             <img src={Card1} alt="" className={classes.cardimage} />
                             <br />
-                            <h1 className={classes.cardhead}>The culture</h1>
+                            <h1 className={classes.cardhead}>Culture</h1>
                             <p className={classes.cardpara}>
-                                It is a long established fact that a reader will be distracted
-                                by the readable content of a page when looking at its layout.
-                                The point of using Lorem Ipsum is that....
+                                The NGOs and companies enrolled with us provide a friendly and thriving work culture. The employees are provided flexible time. All the women from different backgrounds are welcomed and nurtured....
                             </p>
                             <p className={classes.cardpara1}>
                                 May 20th 2021
@@ -221,11 +219,9 @@ function Aboutus() {
                         <Paper elevation={4} className={classes.cardpaper}>
                             <img src={Card2} alt="" className={classes.cardimage} />
                             <br />
-                            <h1 className={classes.cardhead}>The culture</h1>
+                            <h1 className={classes.cardhead}>Opportunities</h1>
                             <p className={classes.cardpara}>
-                                It is a long established fact that a reader will be distracted
-                                by the readable content of a page when looking at its layout.
-                                The point of using Lorem Ipsum is that....
+                                W-Karya provides numerous opportunities to women who want to create a simple yet best life for themselves. We think about the future of women and generates potential scope....
                             </p>
                             <p className={classes.cardpara1}>
                                 May 20th 2021
@@ -239,11 +235,9 @@ function Aboutus() {
                         <Paper elevation={4} className={classes.cardpaper}>
                             <img src={Card3} alt="" className={classes.cardimage} />
                             <br />
-                            <h1 className={classes.cardhead}>The culture</h1>
+                            <h1 className={classes.cardhead}>Safety</h1>
                             <p className={classes.cardpara}>
-                                It is a long established fact that a reader will be distracted
-                                by the readable content of a page when looking at its layout.
-                                The point of using Lorem Ipsum is that....
+                                W-Karya understands the importance of safety for women. We have strict policy against security and welfare for our users. We ensure refuge for the well-being of the women...
                             </p>
                             <p className={classes.cardpara1}>
                                 May 20th 2021

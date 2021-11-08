@@ -7,6 +7,9 @@ import { useHistory } from "react-router-dom";
 import women from './images/girl.png';
 import vector from './images/Vector.png'
 import Footer from "./Footer";
+import testi1 from "./images/testi1.png";
+import testi2 from "./images/testi2.png";
+import testi3 from "./images/testi3.png";
 const useStyles = makeStyles((theme) => ({
   Outer: {
     width: '100%',
@@ -18,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   Gb2: {
     background: '#FFEEE5',
-    height: "450px",
+    height: "550px",
     borderRadius: "60% 60% 0 0"
   },
   Gb3: {
@@ -94,6 +97,12 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "100px"
     // fontSize: "16px",
 
+  },
+  testi: {
+    height: "350px",
+    // margin: "auto auto",
+    paddingLeft: "70px",
+    // textAlign: "center"
   }
 }));
 const Welcome = (props) => {
@@ -158,17 +167,26 @@ const Welcome = (props) => {
       </div>
       <div className={classes.Gb2}>
         <br />
-        <h2 className={classes.heading}>Testimonals</h2>
+        <h2 className={classes.heading}>Testimonials</h2>
         <Grid
           container
           item
           // direction="column"
-          alignItems="center"
+          // alignItems="center"
 
           // justify="center"
           style={{ padding: "30px", paddingTop: "10px" }}
         // className={classes.Gb2}
         >
+          <Grid item md={4} xs={12} alignItems="center">
+            <img src={testi1} className={classes.testi}></img>
+          </Grid>
+          <Grid item md={4} xs={12} alignItems="center">
+            <img src={testi2} className={classes.testi}></img>
+          </Grid>
+          <Grid item md={4} xs={12} alignItems="center">
+            <img src={testi3} className={classes.testi}></img>
+          </Grid>
 
         </Grid>
       </div>
