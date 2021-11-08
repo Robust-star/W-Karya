@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
         color: "white",
     },
     image: {
-        height: "560px",
+        height: "450px",
         marginLeft: '0',
         borderRadius: '10px',
     },
@@ -47,7 +47,12 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: '450px',
     },
     firstColoumn: {
-        marginTop: '10%',
+        // marginTop: '10%',
+        margin: "auto auto",
+        // marginLeft: "4px"
+        paddingLeft: "120px",
+        paddingRight: "100px"
+
 
     },
     first1Coloumn: {
@@ -55,7 +60,11 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#F5F5F5"
     },
     secondColoumn: {
-        marginLeft: '0',
+        margin: "auto auto",
+        // marginLeft: "4px"
+        paddingLeft: "100px",
+        paddingRight: "100px",
+
     },
     main: {
         width: '100%'
@@ -90,7 +99,7 @@ function Contact() {
                                     <label className={classes.label}>Full Name:</label><br />
                                     <input className={classes.inputBox} type='text' placeholder=" Full Name" />
                                 </Grid>
-                                <Grid item>
+                                <Grid item >
                                     <label className={classes.label}>Email:</label><br />
                                     <input className={classes.inputBox} type='email' placeholder="Email" />
                                 </Grid>
@@ -115,7 +124,7 @@ function Contact() {
                         </Grid>
                     </Paper>
                 </Grid>
-                <Grid item xs={6} className={classes.secondColoumn}>
+                <Grid item xs={6} className={classes.secondColoumn} >
                     <img className={classes.image} src={Ladies} alt="" />
                 </Grid>
             </Grid>
