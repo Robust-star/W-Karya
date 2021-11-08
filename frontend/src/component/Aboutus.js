@@ -13,9 +13,11 @@ import {
 } from "@material-ui/core";
 import React from "react";
 import Footer from "./Footer";
-import About1 from "./images/about1.jpg";
-import About2 from "./images/about2.png";
-import Card1 from "./images/image2.png";
+import About1 from "./images/Abt.png"
+import About2 from "./images/abt2.jpeg";
+import Card1 from "./images/img1.jpeg";
+import Card2 from "./images/img2.jpeg";
+import Card3 from "./images/img31.jpg";
 
 const useStyles = makeStyles((theme) => ({
     Outer: {
@@ -211,7 +213,7 @@ function Aboutus() {
                     </Grid>
                     <Grid xs={3} className={classes.card}>
                         <Paper elevation={4} className={classes.cardpaper}>
-                            <img src={Card1} alt="" className={classes.cardimage} />
+                            <img src={Card2} alt="" className={classes.cardimage} />
                             <br />
                             <h1 className={classes.cardhead}>The culture</h1>
                             <p className={classes.cardpara}>
@@ -229,7 +231,7 @@ function Aboutus() {
                     </Grid>
                     <Grid xs={3} className={classes.card}>
                         <Paper elevation={4} className={classes.cardpaper}>
-                            <img src={Card1} alt="" className={classes.cardimage} />
+                            <img src={Card3} alt="" className={classes.cardimage} />
                             <br />
                             <h1 className={classes.cardhead}>The culture</h1>
                             <p className={classes.cardpara}>
