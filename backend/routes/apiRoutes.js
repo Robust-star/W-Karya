@@ -446,11 +446,14 @@ router.put("/user", jwtAuth, (req, res) => {
         if (data.skills) {
           jobApplicant.skills = data.skills;
         }
-        if (data.resume) {
-          jobApplicant.resume = data.resume;
-        }
+        // if (data.resume) {
+        //   jobApplicant.resume = data.resume;
+        // }
         if (data.profile) {
           jobApplicant.profile = data.profile;
+        }
+        if (data.adhar) {
+          jobApplicant.adhar = data.adhar;
         }
         console.log(jobApplicant);
         jobApplicant

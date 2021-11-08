@@ -115,6 +115,8 @@ const Profile = (props) => {
     skills: [],
     resume: "",
     profile: "",
+    //newField
+    adhar: ""
   });
 
   const [education, setEducation] = useState([
@@ -126,6 +128,7 @@ const Profile = (props) => {
   ]);
 
   const handleInput = (key, value) => {
+    // console.log(value)
     setProfileDetails({
       ...profileDetails,
       [key]: value,
@@ -248,6 +251,16 @@ const Profile = (props) => {
                   fullWidth
                 />
               </Grid>
+              <Grid item>
+                <TextField
+                  label="Adhar"
+                  value={profileDetails.adhar}
+                  onChange={(event) => handleInput("adhar", event.target.value)}
+                  className={classes.inputBox}
+                  variant="outlined"
+                  fullWidth
+                />
+              </Grid>
               <MultifieldInput
                 education={education}
                 setEducation={setEducation}
@@ -276,7 +289,7 @@ const Profile = (props) => {
                   fullWidth
                 />
               </Grid>
-              <Grid item>
+              {/* <Grid item>
                 <FileUploadInput
                   className={classes.inputBox}
                   label="Resume (.pdf)"
@@ -285,7 +298,7 @@ const Profile = (props) => {
                   handleInput={handleInput}
                   identifier={"resume"}
                 />
-              </Grid>
+              </Grid> */}
               <Grid item>
                 <FileUploadInput
                   className={classes.inputBox}

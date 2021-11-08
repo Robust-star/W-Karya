@@ -56,6 +56,9 @@ let schema = new mongoose.Schema(
     profile: {
       type: String,
     },
+    adhar: {
+      type: String
+    }
   },
   { collation: { locale: "en" } }
 );

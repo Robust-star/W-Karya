@@ -43,55 +43,55 @@ const MultifieldInput = (props) => {
 
   return (
     <>
-      {education.map((obj, key) => (
-        <Grid
-          item
-          container
-          className={classes.inputBox}
-          key={key}
-          style={{ paddingLeft: 0, paddingRight: 0 }}
-        >
-          <Grid item xs={6}>
-            <TextField
-              label={`Institution Name #${key + 1}`}
-              value={education[key].institutionName}
-              onChange={(event) => {
-                const newEdu = [...education];
-                newEdu[key].institutionName = event.target.value;
-                setEducation(newEdu);
-              }}
-              variant="outlined"
-            />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField
-              label="Start Year"
-              value={obj.startYear}
-              variant="outlined"
-              type="number"
-              onChange={(event) => {
-                const newEdu = [...education];
-                newEdu[key].startYear = event.target.value;
-                setEducation(newEdu);
-              }}
-            />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField
-              label="End Year"
-              value={obj.endYear}
-              variant="outlined"
-              type="number"
-              onChange={(event) => {
-                const newEdu = [...education];
-                newEdu[key].endYear = event.target.value;
-                setEducation(newEdu);
-              }}
-            />
-          </Grid>
-        </Grid>
-      ))}
-      <Grid item>
+      {/* {education.map((obj, key) => (
+        // <Grid
+        //   item
+        //   container
+        //   className={classes.inputBox}
+        //   key={key}
+        //   style={{ paddingLeft: 0, paddingRight: 0 }}
+        // >
+        //   <Grid item xs={6}>
+        //     <TextField
+        //       label={`Institution Name #${key + 1}`}
+        //       value={education[key].institutionName}
+        //       onChange={(event) => {
+        //         const newEdu = [...education];
+        //         newEdu[key].institutionName = event.target.value;
+        //         setEducation(newEdu);
+        //       }}
+        //       variant="outlined"
+        //     />
+        //   </Grid>
+        //   <Grid item xs={3}>
+        //     <TextField
+        //       label="Start Year"
+        //       value={obj.startYear}
+        //       variant="outlined"
+        //       type="number"
+        //       onChange={(event) => {
+        //         const newEdu = [...education];
+        //         newEdu[key].startYear = event.target.value;
+        //         setEducation(newEdu);
+        //       }}
+        //     />
+        //   </Grid>
+        //   <Grid item xs={3}>
+        //     <TextField
+        //       label="End Year"
+        //       value={obj.endYear}
+        //       variant="outlined"
+        //       type="number"
+        //       onChange={(event) => {
+        //         const newEdu = [...education];
+        //         newEdu[key].endYear = event.target.value;
+        //         setEducation(newEdu);
+        //       }}
+        //     />
+        //   </Grid>
+        // </Grid>
+      ))} */}
+      {/* <Grid item>
         <Button
           variant="contained"
           color="secondary"
@@ -109,7 +109,7 @@ const MultifieldInput = (props) => {
         >
           Add another institution details
         </Button>
-      </Grid>
+      </Grid> */}
     </>
   );
 };
@@ -408,7 +408,7 @@ const Login = (props) => {
                 }
               />
             </Grid>
-            <Grid item>
+            {/* <Grid item>
               <FileUploadInput
                 className={classes.inputBox}
                 label="Resume (.pdf)"
@@ -424,7 +424,7 @@ const Login = (props) => {
                 handleInput={handleInput}
                 identifier={"resume"}
               />
-            </Grid>
+            </Grid> */}
             <Grid item>
               <FileUploadInput
                 className={classes.inputBox}

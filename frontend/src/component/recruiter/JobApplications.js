@@ -80,7 +80,7 @@ const FilterPopup = (props) => {
               item
               xs={9}
               justify="space-around"
-              // alignItems="center"
+            // alignItems="center"
             >
               <Grid item>
                 <FormControlLabel
@@ -579,14 +579,13 @@ const ApplicationTile = (props) => {
             Education:{" "}
             {application.jobApplicant.education
               .map((edu) => {
-                return `${edu.institutionName} (${edu.startYear}-${
-                  edu.endYear ? edu.endYear : "Ongoing"
-                })`;
+                return `${edu.institutionName} (${edu.startYear}-${edu.endYear ? edu.endYear : "Ongoing"
+                  })`;
               })
               .join(", ")}
           </Grid>
           <Grid item>
-            SOP: {application.sop !== "" ? application.sop : "Not Submitted"}
+            Adhar: {application.jobApplicant.adhar !== null ? application.jobApplicant.adhar : "Not Submitted"}
           </Grid>
           <Grid item>
             {application.jobApplicant.skills.map((skill) => (
@@ -595,7 +594,7 @@ const ApplicationTile = (props) => {
           </Grid>
         </Grid>
         <Grid item container direction="column" xs={3}>
-          <Grid item>
+          {/* <Grid item>
             <Button
               variant="contained"
               className={classes.statusBlock}
@@ -604,7 +603,7 @@ const ApplicationTile = (props) => {
             >
               Download Resume
             </Button>
-          </Grid>
+          </Grid> */}
           <Grid item container xs>
             {buttonSet[application.status]}
           </Grid>
@@ -626,7 +625,7 @@ const ApplicationTile = (props) => {
             variant="contained"
             color="primary"
             style={{ padding: "10px 50px" }}
-            // onClick={() => changeRating()}
+          // onClick={() => changeRating()}
           >
             Submit
           </Button>
