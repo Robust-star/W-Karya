@@ -192,10 +192,7 @@ function Aboutus() {
                 <center>
                     <h1 className={classes.section3head}> Our latest blog posts </h1>
                     <p className={classes.section3para}>
-                        The National Hookah Community Association (NHCA) is a 501(c)6
-                        non-profit organization that protects and serves its members who are
-                        facing threats from new legislation at the local, state, and federal
-                        level.
+                        W-Karya is an organization which promotes leadership and confidence among women to help them<br /> earn a living of their own and support themselves.
                     </p>
                 </center>
                 <Grid container spacing={0} justify="center">

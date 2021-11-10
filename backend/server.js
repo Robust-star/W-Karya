@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const passportConfig = require("./lib/passportConfig");
 const cors = require("cors");
 const fs = require("fs");
+const nodemailer = require('nodemailer');
 
 // MongoDB
 mongoose
@@ -43,6 +44,46 @@ app.use("/auth", require("./routes/authRoutes"));
 app.use("/api", require("./routes/apiRoutes"));
 app.use("/upload", require("./routes/uploadRoutes"));
 app.use("/host", require("./routes/downloadRoutes"));
+
+
+//Contact
+app.post('/contact', (req, res) => {
+  const data = req.body;
+  // console.log(")
+  console.log("data from backend", data);
+
+  var transporter = nodemailer.createTransport({
+    sendmail: true,
+    service: 'gmail',
+    auth: {
+      user: 'wkarya2021@gmail.com',
+      pass: 'Newwkarya@2021'
+    }
+  });
+  var mailOptions = {
+    from: 'wkarya2021@gmail.com',
+    to: 'raj1999gupta@gmail.com',
+    subject: 'Query email from the users',
+    text: "Cjecking mails from node.js!"
+  };
+
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+      res.status(401).json({
+        message: "Email failed!"
+      });
+    } else {
+      console.log('Email sent: ' + info.response);
+      res.status(200).json({
+        message: "Email sent successfully",
+        response: info.response
+      })
+    }
+  });
+});
+
+
 
 app.listen(port, () => {
   console.log(`Server started on port ${port}!`);

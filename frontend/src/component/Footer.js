@@ -129,9 +129,9 @@ const Footer = (props) => {
                 <Grid item md={3} xs={12}>
                     <h3 className={classes.footerh3}>FAQs</h3>
                     <ul className={classes.list}>
-                        <li><Link className={classes.link} href="#">Why choose us?</Link>
+                        <li><Link className={classes.link} href="/about" >Why choose us?</Link>
                         </li>
-                        <li><Link className={classes.link} href="#">Where we are?</Link>
+                        <li><Link className={classes.link} href="https://www.google.co.in/maps/place/2649,+Sudama+Nagar+Service+Rd,+Pre+Conco+Nagar,+Sudama+Nagar,+Indore,+Madhya+Pradesh+452009/@22.68528,75.8270815,17z/data=!3m1!4b1!4m5!3m4!1s0x3962fc381cec5e07:0x201af7f9a06df512!8m2!3d22.68528!4d75.8292702" target={"/blank"}>Where we are?</Link>
                         </li>
                         <li><Link className={classes.link} href="#">Charges</Link>
                         </li>

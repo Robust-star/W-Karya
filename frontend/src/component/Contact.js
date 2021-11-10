@@ -1,9 +1,11 @@
-import { Grid, Paper, Typography, makeStyles, Button } from "@material-ui/core";
-import React from "react";
+import { Grid, Paper, Typography, makeStyles, Button, } from "@material-ui/core";
+import { React, useState, useContext } from "react";
 import Ladies from "./images/ladies.png";
 import EmailInput from "../lib/EmailInput";
 import Footer from "./Footer";
-
+import apiList from "../lib/apiList";
+import axios from "axios";
+import { SetPopupContext } from "../App";
 const useStyles = makeStyles((theme) => ({
     body: {
         padding: "50px 50px",
@@ -71,8 +73,50 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-function Contact() {
+const Contact = (props) => {
     const classes = useStyles();
+    const setPopup = useContext(SetPopupContext);
+    const [cont, setCont] = useState([
+        {
+            name: "",
+            email: "",
+            msg: ""
+        }
+    ])
+    const handleInput = (key, value) => {
+        setCont({
+            ...cont,
+            [key]: value
+        })
+    }
+    const submit = () => {
+        console.log(cont);
+        axios.post(apiList.contact, cont, {
+            headers: {
+
+            }
+        }).then((response) => {
+            setPopup({
+                open: true,
+                severity: "success",
+                message: response.data.message,
+            });
+            setCont({
+                name: "",
+                email: "",
+                msg: ""
+            });
+        })
+            .catch((err) => {
+                setPopup({
+                    open: true,
+                    severity: "error",
+                    message: err.response.data.message
+                });
+                console.log(err.response);
+            })
+
+    }
     return (
         <div className={classes.main}>
             <Grid container >
@@ -90,25 +134,37 @@ function Contact() {
                                 <h3 className={classes.heading}>Contact Us</h3>
                                 <h4 className={classes.headingText}>
                                     For further questions, including partnership opportunities,
-                                    please email hello@creative- tim.com or contact using our
+                                    please email wkarya2021@gmail.com or contact using our
                                     contact form.
                                 </h4>
                             </Grid>
                             <Grid item>
                                 <Grid item>
                                     <label className={classes.label}>Full Name:</label><br />
-                                    <input className={classes.inputBox} type='text' placeholder=" Full Name" />
+                                    <input className={classes.inputBox} type='text' placeholder=" Full Name"
+                                        value={cont.name}
+                                        onChange={(event) =>
+                                            handleInput("name", event.target.value)
+                                        }
+                                    />
                                 </Grid>
                                 <Grid item >
                                     <label className={classes.label}>Email:</label><br />
-                                    <input className={classes.inputBox} type='email' placeholder="Email" />
+                                    <input className={classes.inputBox} type='email' placeholder="Email" value={cont.email}
+                                        onChange={(event) =>
+                                            handleInput("email", event.target.value)
+                                        } />
                                 </Grid>
                             </Grid>
 
                             <Grid item>
                                 <Grid item>
                                     <label className={classes.label}>How We Can Help You:</label><br />
-                                    <input className={classes.inputBox1} type='text' placeholder=" Write Here" />
+                                    <input className={classes.inputBox1} type='text' placeholder=" Write Here"
+                                        value={cont.msg}
+                                        onChange={(event) =>
+                                            handleInput("msg", event.target.value)
+                                        } />
                                 </Grid>
                             </Grid>
 
@@ -117,6 +173,7 @@ function Contact() {
                                     variant="contained"
                                     color="primary"
                                     className={classes.submitButton}
+                                    onClick={() => submit()}
                                 >
                                     Send Message
                                 </Button>
